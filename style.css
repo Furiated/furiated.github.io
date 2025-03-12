@@ -1,0 +1,96 @@
+/* Basic Setup for Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 10px */
+  font-size: 62.5%;
+}
+
+:root {
+  --pink: #ff3258;
+
+  --nav-height: 8rem;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  color: white;
+  font-size: 1.8rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.row {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.2rem 4rem;
+  border: 1px solid var(--pink);
+  font-size: 2.2rem;
+}
+
+/* Header Styling */
+
+header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* Determine which version looks better, with or without darkening layer */
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),
+    url("images/blue-code-01a.jpg"); */
+  background-image: url("images/header-00a.jpg");
+  /* background-image: url("images/blue-code-01a.jpg"); */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Note to self, adding display: flex and flex-direction: column above changes the alignment of the elements to be centered. Adding the below reverts back to the original alignment */
+header .row {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6rem;
+  /* padding: 2.5rem; */
+  height: var(--nav-height);
+}
+
+nav a {
+  font-size: 2.2rem;
+}
+
+.header-text-container {
+  /* Height = 100% minus nav height */
+  height: calc(100% - var(--nav-height));
+  display: flex;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.header-text-container p {
+  font-size: 2.4rem;
+  margin: 1rem 0 3rem;
+}
+
+h1 {
+  font-size: 7.5rem;
+  font-weight: 400;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  /* border: 1px solid; */
+  line-height: 0.85;
+}
