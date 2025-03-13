@@ -64,6 +64,7 @@ img {
 
 section {
   padding: var(--gutter-x-large) 0;
+  border-bottom: 1px solid #222222;
 }
 
 h1,
@@ -189,4 +190,18 @@ nav a {
 
 .gh-link img {
   height: 2.8rem;
+}
+
+/* Clients Styling */
+
+.clients {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--gutter-medium) 0;
+}
+
+.clients img {
+  height: 65px;
+  max-width: 180px;
+  filter: grayscale(100%) invert(100%) opacity(0.8);
 }
