@@ -13,14 +13,26 @@ html {
 
 :root {
   --pink: #ff3258;
+  --black: #010101; /* not exactly black  */
+  --off-white: #ffffffc6;
 
   --nav-height: 8rem;
+
+  --gutter-xx-small: 2rem;
+  --gutter-x-small: 3rem;
+  --gutter-small: 4rem;
+  --gutter-medium: 6rem;
+  --gutter-large: 8rem;
+  --gutter-x-large: 10rem;
+  --gutter-xx-large: 20rem;
 }
 
 body {
   font-family: "Jost", sans-serif;
-  color: white;
+  color: var(--off-white);
   font-size: 1.8rem;
+  background-color: var(--black);
+  font-weight: 300;
 }
 
 a {
@@ -40,6 +52,57 @@ a {
   font-size: 2.2rem;
 }
 
+.btn-text {
+  display: inline-block;
+  padding: 0.8rem 0.5rem;
+  border-bottom: 1px solid var(--pink);
+}
+
+img {
+  object-fit: contain;
+}
+
+section {
+  padding: var(--gutter-x-large) 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  color: white;
+}
+
+h1 {
+  font-size: 7.5rem;
+  /* font-weight: 400; */
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  /* border: 1px solid; */
+  line-height: 0.85;
+}
+
+h2 {
+  font-size: 6rem;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  height: 0.3rem;
+  width: 12rem;
+  margin-top: 1rem;
+  background-color: var(--pink);
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+ul {
+  list-style-position: inside;
+}
+
 /* Header Styling */
 
 header {
@@ -53,6 +116,7 @@ header {
   /* background-image: url("images/blue-code-01a.jpg"); */
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 /* Note to self, adding display: flex and flex-direction: column above changes the alignment of the elements to be centered. Adding the below reverts back to the original alignment */
@@ -86,11 +150,43 @@ nav a {
   margin: 1rem 0 3rem;
 }
 
-h1 {
-  font-size: 7.5rem;
-  font-weight: 400;
-  /* background-color: rgba(0, 0, 0, 0.2); */
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-  /* border: 1px solid; */
-  line-height: 0.85;
+/* My Work Styling */
+
+.work-box {
+  display: flex;
+  align-items: center;
+  gap: var(--gutter-large);
+  margin-top: var(--gutter-x-small);
+}
+
+.work-box:not(:last-child) {
+  margin-bottom: var(--gutter-xx-large);
+}
+
+.work-box-img {
+  max-width: 726px;
+}
+
+.work-box-img img {
+  max-width: 100%;
+}
+
+.work-box-links {
+  display: flex;
+  align-items: center;
+  gap: var(--gutter-x-small);
+}
+
+,
+.gh-link {
+  transition: all 0.3s;
+}
+
+.gh-link:hover,
+.gh-link:focus {
+  transform: scale(1.3);
+}
+
+.gh-link img {
+  height: 2.8rem;
 }
