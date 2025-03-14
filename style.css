@@ -34,6 +34,7 @@ body {
   background-color: var(--black);
   font-weight: 300;
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 a {
@@ -45,6 +46,18 @@ a {
   max-width: 80%;
   margin: 0 auto;
   /* border: 1px solid; */
+}
+
+@media (max-width: 1350px) {
+  .row {
+    padding: 0 var(--gutter-large);
+  }
+}
+
+@media (max-width: 850px) {
+  .row {
+    padding: 0 var(--gutter-medium);
+  }
 }
 
 .btn {
@@ -165,12 +178,39 @@ nav a {
   /* border: 1px solid red; */
 }
 
+@media (max-width: 1145px) {
+  .work-box {
+    flex-direction: column;
+    align-items: initial;
+  }
+}
+
+.work-box:first-of-type {
+  margin-top: var(--gutter-medium);
+}
+
 .work-box:not(:last-child) {
   margin-bottom: var(--gutter-xx-large);
 }
 
+.work-box-text > *:not(h3) {
+  margin-top: var(--gutter-xx-small);
+}
+
 .work-box-img {
   max-width: 726px;
+}
+
+@media (max-width: 1350px) {
+  .work-box-img {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 1145px) {
+  .work-box-img {
+    max-width: initial;
+  }
 }
 
 .work-box-img img {
@@ -226,6 +266,12 @@ nav a {
 
 .about-img {
   flex: 0 0 650px;
+}
+
+@media (max-width: 1350px) {
+  .about-img {
+    flex: 0 0 500px;
+  }
 }
 
 /* Get in Touch Styling */
