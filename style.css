@@ -44,6 +44,7 @@ a {
 .row {
   max-width: 80%;
   margin: 0 auto;
+  /* border: 1px solid; */
 }
 
 .btn {
@@ -158,8 +159,10 @@ nav a {
 .work-box {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   gap: var(--gutter-large);
   margin-top: var(--gutter-x-small);
+  /* border: 1px solid red; */
 }
 
 .work-box:not(:last-child) {
