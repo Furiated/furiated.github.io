@@ -7,8 +7,13 @@
 }
 
 html {
-  /* 10px */
-  font-size: 62.5%;
+  font-size: 62.5%; /* 10px */
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 55%;
+  }
 }
 
 :root {
@@ -60,6 +65,12 @@ a {
   }
 }
 
+@media (max-width: 560px) {
+  .row {
+    padding: 0 var(--gutter-small);
+  }
+}
+
 .btn {
   display: inline-block;
   padding: 1.2rem 4rem;
@@ -88,6 +99,7 @@ h2,
 h3 {
   font-weight: 400;
   color: white;
+  line-height: 1.3;
 }
 
 h1 {
@@ -116,6 +128,20 @@ h3 {
   font-size: 4rem;
 }
 
+@media (max-width: 590px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+}
+
 ul {
   list-style-position: inside;
 }
@@ -136,6 +162,17 @@ header {
   background-attachment: fixed;
 }
 
+@media (max-width: 540px) {
+  header {
+    text-align: center;
+  }
+
+  .header-text-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 /* Note to self, adding display: flex and flex-direction: column above changes the alignment of the elements to be centered. Adding the below reverts back to the original alignment */
 header .row {
   width: 100%;
@@ -145,9 +182,27 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 6rem;
+  gap: var(--gutter-medium);
   /* padding: 2.5rem; */
   height: var(--nav-height);
+}
+
+@media (max-width: 540px) {
+  nav {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 420px) {
+  nav {
+    gap: var(--gutter-small);
+  }
+}
+
+@media (max-width: 340px) {
+  nav {
+    gap: var(--gutter-x-small);
+  }
 }
 
 nav a {
@@ -192,6 +247,12 @@ nav a {
 
 .work-box:not(:last-child) {
   margin-bottom: var(--gutter-xx-large);
+}
+
+@media (max-width: 750px) {
+  .work-box:not(:last-child) {
+    margin-bottom: var(--gutter-x-large);
+  }
 }
 
 .work-box-text > *:not(h3) {
@@ -258,6 +319,14 @@ nav a {
   border: 1px solid;
 }
 
+@media (max-width: 800px) {
+  .clients img {
+    height: 50px;
+    max-width: 150px;
+  }
+}
+
+/* Below looks to be not needed since we removed the scrollbar  */
 /* @media (max-width: 1350px) {
   .clients img:not(:last-child) {
     margin-right: var(--gutter-medium);
@@ -265,6 +334,7 @@ nav a {
 } */
 
 /* About Me Styling */
+/* TODO: See about centering About Me and Get in Touch sections vertially at smaller screen sizes */
 
 .about {
   display: flex;
