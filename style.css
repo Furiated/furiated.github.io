@@ -8,6 +8,7 @@
 
 html {
   font-size: 62.5%; /* 10px */
+  scroll-behavior: smooth;
 }
 
 @media (max-width: 800px) {
@@ -285,7 +286,6 @@ nav a {
   gap: var(--gutter-x-small);
 }
 
-,
 .gh-link {
   transition: all 0.3s;
 }
