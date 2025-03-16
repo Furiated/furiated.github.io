@@ -17,8 +17,10 @@ html {
   }
 }
 
+/* TODO: Clean up replacing pink with cornflowerblue  */
 :root {
-  --pink: #ff3258;
+  /* --pink: #ff3258; */
+  --pink: cornflowerblue;
   --black: #010101; /* not exactly black  */
   --off-white: #ffffffc6;
 
@@ -83,6 +85,34 @@ a {
   display: inline-block;
   padding: 0.8rem 0.5rem;
   border-bottom: 1px solid var(--pink);
+}
+
+.btn,
+.btn-text {
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
+.btn::after,
+.btn-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: white;
+  transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
+  z-index: -1;
+}
+
+.btn:hover::after,
+.btn-text:hover::after {
+  right: 0;
+  background: var(--pink);
 }
 
 img {
@@ -224,6 +254,7 @@ nav a {
 }
 
 /* My Work Styling */
+/* TODO: Review media breakpoint to determine where is a good point to switch the flex to column so that the "Visit Site ->" text does not break up  */
 
 .work-box {
   display: flex;
