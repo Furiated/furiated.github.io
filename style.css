@@ -456,3 +456,32 @@ footer {
 .footer-social img {
   height: 40px;
 }
+
+/* Back to Top Styling */
+
+.back-to-top {
+  position: fixed;
+  bottom: var(--gutter-small);
+  right: var(--gutter-small);
+  background: var(--pink);
+  height: 5.5rem;
+  width: 5.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.2s;
+}
+
+.back-to-top.shown {
+  visibility: visible;
+  transform: none;
+  opacity: 1;
+}
+
+.back-to-top img {
+  height: 40px;
+}
