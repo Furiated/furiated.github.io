@@ -279,7 +279,8 @@ nav a:hover::after {
   margin: 1rem 0 3rem;
 }
 
-/* My Work Styling */
+/* Projects Styling */
+
 /* TODO: Review media breakpoint to determine where is a good point to switch the flex to column so that the "Visit Site ->" text does not break up  */
 
 .work-box {
@@ -335,6 +336,11 @@ nav a:hover::after {
 
 .work-box-img img {
   max-width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.work-box-img img:hover {
+  transform: scale(1.05);
 }
 
 .work-box-links {
@@ -356,9 +362,9 @@ nav a:hover::after {
   height: 2.8rem;
 }
 
-/* Clients Styling */
+/* Skills Styling */
 
-.clients {
+.skills {
   display: flex;
   justify-content: space-between;
   padding: var(--gutter-medium) 0;
@@ -368,7 +374,7 @@ nav a:hover::after {
   /* border: 1px solid; */
 }
 
-.clients img {
+.skills img {
   height: 65px;
   max-width: 180px;
   filter: grayscale(100%) invert(100%) opacity(0.8);
@@ -377,21 +383,17 @@ nav a:hover::after {
 }
 
 @media (max-width: 800px) {
-  .clients img {
+  .skills img {
     height: 50px;
     max-width: 150px;
   }
 }
 
-/* Below looks to be not needed since we removed the scrollbar  */
-/* @media (max-width: 1350px) {
-  .clients img:not(:last-child) {
-    margin-right: var(--gutter-medium);
-  }
-} */
-
 /* About Me Styling */
+
 /* TODO: See about centering About Me and Get in Touch sections vertially at smaller screen sizes */
+
+/* TODO: See what media breakpoint makes sense after replacing the placeholder text here */
 
 .about {
   display: flex;
